@@ -1,4 +1,4 @@
-import './music-card.css';
+import './MusicCard.css';
 
 interface MusicDescriptionProps {
 	children: React.ReactNode;

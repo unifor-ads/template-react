@@ -6,7 +6,7 @@ export const Navbar = () => {
 	return (
 		<nav className='navbar navbar-expand-lg bg-dark'>
 			<div className='container-fluid'>
-				<a className='navbar-brand' href='#'>
+				<a className='navbar-brand' href='/'>
 					<Logo />
 					<span className='mx-2'>Spotifei</span>
 				</a>
@@ -23,8 +23,8 @@ export const Navbar = () => {
 				</button>
 				<div className='collapse navbar-collapse' id='navbarSupportedContent'>
 					<ul className='navbar-nav me-auto mb-2 mb-lg-0'>
-						<li className='nav-item'>
-							<a className='nav-link active' aria-current='page' href='#'>
+						<li className='nav-item' key='faq'>
+							<a className='nav-link active' aria-current='page' href='faq'>
 								FAQ
 							</a>
 						</li>
@@ -40,18 +40,3 @@ export const Navbar = () => {
 		</nav>
 	);
 };
-
-// <nav className='navbar bg-dark fluid'>
-// 	<div className='container-fluid'>
-// 		<a className='navbar-brand' href='#'>
-// 			<img
-// 				src='images/nav-logo.png'
-// 				alt='Logo'
-// 				width='32'
-// 				height='32'
-// 				className='d-inline-block align-text-top'
-// 			/>
-// 			<span className='mx-2'>Spotifei</span>
-// 		</a>
-// 	</div>
-// </nav>

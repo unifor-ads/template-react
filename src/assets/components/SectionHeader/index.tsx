@@ -8,7 +8,7 @@ interface sectionHeaderProps {
 export const SectionHeader = ({ children }: sectionHeaderProps) => {
 	return (
 		<Section>
-			<h2 className='text-white'>
+			<h2>
 				<strong>{children}</strong>
 			</h2>
 		</Section>

@@ -5,6 +5,7 @@ import { useState } from 'react';
 import './App.css';
 
 import { Navbar } from './assets/components/Navbar';
+import { SignIn } from './assets/pages/SignIn';
 import Home from './assets/pages/Home';
 import Faq from './assets/pages/Faq';
 
@@ -15,6 +16,7 @@ function App() {
 			<Routes>
 				<Route path='/' Component={Home} />
 				<Route path='/faq' Component={Faq} />
+				<Route path='/signin' Component={SignIn} />
 			</Routes>
 		</Router>
 	);

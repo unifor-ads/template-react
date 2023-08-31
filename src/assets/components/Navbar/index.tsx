@@ -11,7 +11,7 @@ export const Navbar = () => {
 					<span className='mx-2'>Spotifei</span>
 				</a>
 				<button
-					className='navbar-toggler'
+					className='navbar-toggler nav-button'
 					type='button'
 					data-bs-toggle='collapse'
 					data-bs-target='#navbarSupportedContent'
@@ -31,9 +31,9 @@ export const Navbar = () => {
 					</ul>
 
 					<form className='d-flex' role='login'>
-						<button className='btn' type='submit'>
+						<a className='btn' type='submit' href='signin'>
 							Entrar
-						</button>
+						</a>
 					</form>
 				</div>
 			</div>

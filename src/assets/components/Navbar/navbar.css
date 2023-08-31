@@ -1,4 +1,4 @@
-* {
+nav.navbar * {
 	color: white !important;
 }
 
@@ -12,27 +12,27 @@ i {
 }
 
 @media (min-width: 769px) {
-	li.nav-item>*:hover {
+	.nav-item>*:hover {
 		border-top: 3px solid whitesmoke;
 		padding-top: 4px;
 	}
 
-	li.nav-item>*:active {
+	.nav-item>*:active {
 		border-top: 3px solid white;
 		padding-top: 4px;
 	}
 
-	button.btn {
+	.nav-button.btn {
 		border: 1px solid gray;
 		background-color: #212529;
 	}
 
-	button.btn:hover {
+	.nav-button.btn:hover {
 		border: 1px solid white;
 		background-color: #171717;
 	}
 
-	button.btn:active {
+	.nav-button.btn:active {
 		border: 1px solid rgb(179, 179, 184);
 	}
 }
@@ -50,17 +50,17 @@ i {
 		margin-top: 70px;
 	}
 
-	button.btn {
+	.nav-button.btn {
 		border: none;
 		background-color: transparent;
 	}
 
-	button.btn:hover {
+	.nav-button.btn:hover {
 		border: none;
 		background-color: transparent;
 	}
 
-	button.btn:active {
+	.nav-button.btn:active {
 		border: 0px;
 	}
 

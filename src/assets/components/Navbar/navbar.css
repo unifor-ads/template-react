@@ -1,5 +1,28 @@
-.navbar>.container-fluid>* {
-	color: white;
-	margin-left: 1rem;
-	margin-right: 1rem;
+* {
+	color: white !important;
+}
+
+a {
+	display: flex;
+	align-items: center;
+}
+
+i {
+	color: gray;
+}
+
+.btn {
+	border: 1px solid gray;
+	background-color: #212529 !important;
+	color: white !important;
+}
+
+.btn:hover {
+	border: 1px solid white;
+	background-color: #171717 !important;
+	color: white !important;
+}
+
+.btn:active {
+	border: 1px solid rgb(179, 179, 184) !important;
 }

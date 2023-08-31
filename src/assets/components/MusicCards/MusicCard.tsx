@@ -1,8 +1,7 @@
-import { MusicImg } from "./MusicImg";
-import { MusicCardContent } from "./MusicCardContent";
-import { MusicTitle } from "./MusicTitle";
-import { MusicDescription } from "./MusicDescription";
-import { Card } from "../base/Card";
+import { MusicImg } from './MusicImg';
+import { MusicCardContent } from './MusicCardContent';
+import { MusicTitle } from './MusicTitle';
+import { MusicDescription } from './MusicDescription';
 
 export interface MusicCardProps {
 	imgSrc: string;
@@ -11,10 +10,10 @@ export interface MusicCardProps {
 	href: string;
 }
 
-export const MusicCard = ({imgSrc, title, description, href}: MusicCardProps) => {
+export const MusicCard = ({ imgSrc, title, description, href }: MusicCardProps) => {
 	return (
-		<div className="col">
-			<div className="music-card">
+		<div className='col'>
+			<div className='music-card mt-4'>
 				<a href={href}>
 					<MusicImg src={imgSrc} />
 					<MusicCardContent title={title} description={description} />
@@ -22,4 +21,4 @@ export const MusicCard = ({imgSrc, title, description, href}: MusicCardProps) =>
 			</div>
 		</div>
 	);
-}
+};

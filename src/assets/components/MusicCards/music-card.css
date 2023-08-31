@@ -54,6 +54,12 @@
 	color: whitesmoke;
 }
 
+@media (max-width: 768px) {
+	.music-card {
+		aspect-ratio: 1 / 1;
+	}
+}
+
 /* .music-grid {
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);

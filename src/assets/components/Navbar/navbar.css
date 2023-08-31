@@ -11,18 +11,54 @@ i {
 	color: gray;
 }
 
-.btn {
-	border: 1px solid gray;
-	background-color: #212529 !important;
-	color: white !important;
+@media (min-width: 769px) {
+	li.nav-item>*:hover {
+		border-top: 1px solid whitesmoke;
+	}
+
+	button.btn {
+		border: 1px solid gray;
+		background-color: #212529;
+	}
+
+	button.btn:hover {
+		border: 1px solid white;
+		background-color: #171717;
+	}
+
+	button.btn:active {
+		border: 1px solid rgb(179, 179, 184);
+	}
 }
 
-.btn:hover {
-	border: 1px solid white;
-	background-color: #171717 !important;
-	color: white !important;
-}
+@media (max-width: 768px) {
+	nav {
+		position: fixed !important;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 100;
+	}
 
-.btn:active {
-	border: 1px solid rgb(179, 179, 184) !important;
+	body {
+		margin-top: 70px;
+	}
+
+	button.btn {
+		border: none;
+		background-color: transparent;
+	}
+
+	button.btn:hover {
+		border: none;
+		background-color: transparent;
+	}
+
+	button.btn:active {
+		border: 0px;
+	}
+
+	li.nav-item>* {
+		padding: 0.375rem 0.75rem;
+	}
 }

@@ -19,7 +19,7 @@ export const Navbar = () => {
 					aria-expanded='false'
 					aria-label='Toggle navigation'
 				>
-					<span className='navbar-toggler-icon'></span>
+					<i className='bi bi-list'></i>
 				</button>
 				<div className='collapse navbar-collapse' id='navbarSupportedContent'>
 					<ul className='navbar-nav me-auto mb-2 mb-lg-0'>
@@ -31,7 +31,7 @@ export const Navbar = () => {
 					</ul>
 
 					<form className='d-flex' role='login'>
-						<button className='btn inner-white' type='submit'>
+						<button className='btn' type='submit'>
 							Entrar
 						</button>
 					</form>

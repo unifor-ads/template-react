@@ -11,16 +11,43 @@ a {
 	height: var(--navbar-height);
 }
 
+.theme-mode.dark-mode {
+	color: whitesmoke;
+	cursor: pointer;
+}
+
+.navbar.component .theme-mode:hover {
+	transform: scale(1.1);
+}
+
+.navbar.component .theme-mode:active {
+	transform: scale(1.2);
+}
+
+.navbar.component .theme-mode.dark-mode:hover {
+	color: white;
+}
+
+.navbar.component .theme-mode.dark-mode:active {
+	color: white;
+}
+
 @media (min-width: 769px) {
 
-	.nav-item>*:hover {
-		border-top: 3px solid whitesmoke;
-		padding-top: 4px;
+	.navbar.component .nav-item * {
+		color: whitesmoke;
 	}
 
-	.nav-item>*:active {
+	.navbar.component .nav-item *:hover {
 		border-top: 3px solid white;
 		padding-top: 4px;
+		color: white;
+	}
+
+	.navbar.component .nav-item *:active {
+		border-top: 3px solid white;
+		padding-top: 4px;
+		color: white;
 	}
 
 	.nav-button.btn {

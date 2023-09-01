@@ -1,4 +1,5 @@
-import React from 'react';
+import './SectionHeader.css';
+
 import { Section } from '../Section';
 
 interface sectionHeaderProps {
@@ -7,7 +8,7 @@ interface sectionHeaderProps {
 
 export const SectionHeader = ({ children }: sectionHeaderProps) => {
 	return (
-		<Section>
+		<Section className='section-header component'>
 			<h2>
 				<strong>{children}</strong>
 			</h2>

@@ -1,0 +1,10 @@
+@media (min-width: 769px) {
+	.card.sign-in {
+		/* width: 40vw; */
+		padding: 1rem;
+		aspect-ratio: 3 / 4;
+		max-height: calc(100vh - 100px);
+	}
+}
+
+@media (max-width: 768px) {}

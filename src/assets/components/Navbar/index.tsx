@@ -4,7 +4,7 @@ import { Logo } from './Logo';
 
 export const Navbar = () => {
 	return (
-		<nav className='navbar navbar-expand-lg bg-dark'>
+		<nav className='navbar component navbar-expand-lg bg-body-tertiary'>
 			<div className='container-fluid'>
 				<a className='navbar-brand' href='/'>
 					<Logo />

@@ -8,13 +8,12 @@ export interface questionAndAnswerProps {
 
 export const QuestionAndAnswer = ({ question, answer, answerList }: questionAndAnswerProps) => {
 	const id = uuidv4();
-	// const id = '001';
 
 	return (
-		<div className='accordion-item bg-dark'>
+		<div className='accordion-item'>
 			<h2 className='accordion-header'>
 				<button
-					className='accordion-button collapsed bg-dark'
+					className='accordion-button collapsed'
 					type='button'
 					data-bs-toggle='collapse'
 					data-bs-target={`#${id}`}

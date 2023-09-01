@@ -1,12 +1,15 @@
+import './SignIn.css';
+
 import { Section } from '../../components/Section';
+import { Card } from '../../components/base/Card';
 
 export const SignIn = () => {
 	return (
-		<section className='container'>
-			<div className='card'>
+		<Section>
+			<Card className='sign-in'>
 				<form>
-					<div className='mb-3'>
-						<label className='form-label'>Username</label>
+					<div data-bs-theme='blue' className='mb-3'>
+						<label className='form-label mb-0'>Username</label>
 						<div className='input-group mb-3'>
 							<span className='input-group-text' id='basic-addon1'>
 								@
@@ -56,7 +59,7 @@ export const SignIn = () => {
 						Cadastar
 					</button>
 				</form>
-			</div>
-		</section>
+			</Card>
+		</Section>
 	);
 };

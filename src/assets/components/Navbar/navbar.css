@@ -1,5 +1,5 @@
-nav.navbar * {
-	color: white !important;
+#root {
+	--navbar-height: 3.5rem;
 }
 
 a {
@@ -7,11 +7,12 @@ a {
 	align-items: center;
 }
 
-i {
-	color: gray;
+.navbar.component {
+	height: var(--navbar-height);
 }
 
 @media (min-width: 769px) {
+
 	.nav-item>*:hover {
 		border-top: 3px solid whitesmoke;
 		padding-top: 4px;
@@ -47,7 +48,7 @@ i {
 	}
 
 	body {
-		margin-top: 70px;
+		margin-top: var(--navbar-height);
 	}
 
 	.nav-button.btn {
@@ -63,10 +64,6 @@ i {
 	.nav-button.btn:active {
 		border: 0px;
 	}
-
-	/* li.nav-item>* {
-		padding: 0.375rem 0.75rem
-	} */
 
 	.navbar-collapse button {
 		width: 100%;

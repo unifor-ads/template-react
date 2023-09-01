@@ -1,4 +1,4 @@
-#root {
+:root {
 	--navbar-height: 3.5rem;
 }
 
@@ -31,6 +31,7 @@ a {
 	.nav-button.btn:hover {
 		border: 1px solid white;
 		background-color: #171717;
+		color: white;
 	}
 
 	.nav-button.btn:active {

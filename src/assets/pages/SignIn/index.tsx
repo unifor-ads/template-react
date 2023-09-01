@@ -7,6 +7,7 @@ export const SignIn = () => {
 	return (
 		<Section>
 			<Card className='sign-in'>
+				<h4 className='text-align-center'>Cadastro</h4>
 				<form>
 					<div data-bs-theme='blue' className='mb-3'>
 						<label className='form-label mb-0'>Username</label>
@@ -22,7 +23,7 @@ export const SignIn = () => {
 						</div>
 					</div>
 					<div className='mb-3'>
-						<label className='form-label'>E-mail</label>
+						<label className='form-label mb-0'>E-mail</label>
 						<input
 							type='email'
 							className='form-control'
@@ -34,7 +35,7 @@ export const SignIn = () => {
 						</div>
 					</div>
 					<div className='mb-3'>
-						<label className='form-label'>Senha</label>
+						<label className='form-label mb-0'>Senha</label>
 						<input
 							type='password'
 							className='form-control'
@@ -42,7 +43,7 @@ export const SignIn = () => {
 						/>
 					</div>
 					<div className='mb-3'>
-						<label className='form-label'>Repita a senha</label>
+						<label className='form-label mb-0'>Repita a senha</label>
 						<input
 							type='password'
 							className='form-control'
@@ -55,9 +56,11 @@ export const SignIn = () => {
 							Quero receber novidades por e-mail
 						</label>
 					</div>
-					<button type='submit' className='btn btn-primary'>
-						Cadastar
-					</button>
+					<div className='text-align-center'>
+						<button type='submit' className='btn btn-primary'>
+							Cadastar
+						</button>
+					</div>
 				</form>
 			</Card>
 		</Section>

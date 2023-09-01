@@ -31,7 +31,7 @@ export const Navbar = () => {
 					</ul>
 
 					<form className='d-flex' role='login'>
-						<a className='btn' type='submit' href='signin'>
+						<a className='btn nav-button' type='submit' href='signin'>
 							Entrar
 						</a>
 					</form>

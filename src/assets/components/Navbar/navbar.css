@@ -9,11 +9,12 @@ a {
 
 .navbar.component {
 	height: var(--navbar-height);
+	background-color: var(--navbar-background-color) !important;
 }
 
-.theme-mode.dark-mode {
-	color: whitesmoke;
+.navbar .theme-mode {
 	cursor: pointer;
+	color: var(--bs-navbar-active-color);
 }
 
 .navbar.component .theme-mode:hover {
@@ -25,40 +26,31 @@ a {
 }
 
 .navbar.component .theme-mode.dark-mode:hover {
-	color: white;
+	/* color: white; */
 }
 
 .navbar.component .theme-mode.dark-mode:active {
-	color: white;
+	/* color: white; */
 }
 
 @media (min-width: 769px) {
 
 	.navbar.component .nav-item * {
-		color: whitesmoke;
+		/* color: whitesmoke; */
 	}
 
 	.navbar.component .nav-item *:hover {
-		border-top: 3px solid white;
+		border-top: 3px solid gray;
 		padding-top: 4px;
-		color: white;
 	}
 
 	.navbar.component .nav-item *:active {
-		border-top: 3px solid white;
+		border-top: 3px solid gray;
 		padding-top: 4px;
-		color: white;
 	}
 
 	.nav-button.btn {
 		border: 1px solid gray;
-		background-color: #212529;
-	}
-
-	.nav-button.btn:hover {
-		border: 1px solid white;
-		background-color: #171717;
-		color: white;
 	}
 
 	.nav-button.btn:active {

@@ -1,24 +1,12 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import useTheme from '../../hooks/useTheme';
 
 import './navbar.css';
 
 import { Logo } from './Logo';
 
 export const Navbar = () => {
-	const [theme, setTheme] = useState('dark');
-
-	const toggleTheme = () => {
-		const rootElement = document.getElementById('root');
-		if (!rootElement) return;
-
-		if (theme === 'dark') {
-			rootElement.setAttribute('data-bs-theme', 'light');
-			setTheme('light');
-		} else {
-			rootElement.setAttribute('data-bs-theme', 'dark');
-			setTheme('dark');
-		}
-	};
+	const { theme, toggleTheme } = useTheme();
 
 	return (
 		<nav className='navbar component navbar-expand-lg bg-body-tertiary'>
@@ -48,7 +36,11 @@ export const Navbar = () => {
 					</ul>
 
 					<a className='theme-mode dark-mode mx-3' onClick={toggleTheme}>
-						<i className='bi bi-moon-stars-fill'></i>
+						<i
+							className={
+								theme === 'light' ? 'bi bi-moon-stars-fill' : 'bi bi-sun-fill'
+							}
+						></i>
 					</a>
 
 					<form className='d-flex' role='login'>

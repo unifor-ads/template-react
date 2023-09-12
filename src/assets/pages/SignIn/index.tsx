@@ -3,7 +3,7 @@ import './SignIn.css';
 import { Section } from '../../components/Section';
 import { Card } from '../../components/base/Card';
 
-export const SignIn = () => {
+const SignIn = () => {
 	return (
 		<Section>
 			<Card className='sign-in'>
@@ -66,3 +66,5 @@ export const SignIn = () => {
 		</Section>
 	);
 };
+
+export default SignIn;

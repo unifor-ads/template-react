@@ -5,6 +5,7 @@ export const useTheme = () => {
 	// Lê o tema do cookie imediatamente
 	const initialTheme = Cookies.get('theme') || 'dark';
 	const [theme, setTheme] = useState(initialTheme);
+	document.documentElement.setAttribute('data-bs-theme', theme);
 
 	const toggleTheme = () => {
 		const newTheme = theme === 'light' ? 'dark' : 'light';
@@ -23,7 +24,6 @@ export const useTheme = () => {
 			'--navbar-background-color',
 			theme === 'light' ? '#dee4ea' : '#2B3035',
 		);
-		// Aqui você pode aplicar outras propriedades de estilo conforme necessário
 	}, [theme]);
 
 	return { theme, toggleTheme };

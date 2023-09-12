@@ -1,12 +1,12 @@
-import { MusicTitle } from './MusicTitle';
-import { MusicDescription } from './MusicDescription';
+import MusicTitle from './MusicTitle';
+import MusicDescription from './MusicDescription';
 
 interface musicCardContentProps {
 	title: string;
 	description: string;
 }
 
-export const MusicCardContent = ({ title, description }: musicCardContentProps) => {
+const MusicCardContent = ({ title, description }: musicCardContentProps) => {
 	return (
 		<div className='text-contrast'>
 			<div className='text-content'>
@@ -16,3 +16,5 @@ export const MusicCardContent = ({ title, description }: musicCardContentProps) 
 		</div>
 	);
 };
+
+export default MusicCardContent;

@@ -1,17 +1,16 @@
 import './Home.css';
 
-import { SectionHeader } from '../../components/SectionHeader';
-import { MusicCards } from '../../components/MusicCards';
-import { Section } from '../../components/Section';
+import MusicCards from '../../components/MusicCards';
+import { Section, SectionHeader } from '../../components/Section';
 
-import { musics } from '../../mockData/musics';
+import { tracks } from '../../mockData/tracks';
 
 const Home = () => {
 	return (
 		<>
 			<SectionHeader>Descubra sua nova música favorita.</SectionHeader>
 			<Section>
-				<MusicCards musics={musics} />
+				<MusicCards tracks={tracks} />
 			</Section>
 		</>
 	);

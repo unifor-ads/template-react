@@ -1,5 +1,14 @@
-body {
-	background-color: var(--background-color);
+:root {
+	--background-light-color: #f2f2f2;
+	--background-dark-color: #171717;
+}
+
+body.dark {
+	background-color: var(--background-dark-color);
+}
+
+body.light {
+	background-color: var(--background-light-color);
 }
 
 .text-align-center {

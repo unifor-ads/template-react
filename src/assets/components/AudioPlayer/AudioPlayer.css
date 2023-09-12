@@ -1,0 +1,23 @@
+.audio-player .timebar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	column-gap: 1rem;
+}
+
+.audio-player .controls-wrapper {
+	display: flex;
+	align-items: center;
+	column-gap: 1rem;
+}
+
+.audio-player .controls-wrapper .volume {
+	display: flex;
+	align-items: center;
+	column-gap: 1rem;
+}
+
+
+.audio-player input[type="range"] {
+	width: -webkit-fill-available;
+}

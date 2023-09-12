@@ -1,27 +1,29 @@
 import './MusicCard.css';
 
-import { MusicCard, MusicCardProps } from './MusicCard';
+import MusicCard from './MusicCard';
 
 interface MusicCardsProps {
-	musics: {
+	tracks: {
 		name: string;
 		artist: string;
-		imgSrc: string;
+		thumbnail: string;
 		href: string;
 	}[];
 }
 
-export const MusicCards = ({ musics: musics }: MusicCardsProps) => {
+const MusicCards = ({ tracks: tracks }: MusicCardsProps) => {
 	return (
 		<div className='row row-cols-lg-5 row-cols-md-3 row-cols-2'>
-			{musics.slice(0, 5).map((music) => (
+			{tracks.slice(0, 5).map((track) => (
 				<MusicCard
-					title={music.name}
-					description={music.artist}
-					imgSrc={music.imgSrc}
-					href={music.href}
+					title={track.name}
+					description={track.artist}
+					thumbnail={track.thumbnail}
+					href={track.href}
 				/>
 			))}
 		</div>
 	);
 };
+
+export default MusicCards;

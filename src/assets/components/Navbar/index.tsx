@@ -4,8 +4,9 @@ import useTheme from '../../hooks/useTheme';
 import './navbar.css';
 
 import { Logo } from './Logo';
+import { NavbarItem } from './NavbarItem';
 
-export const Navbar = () => {
+const Navbar = () => {
 	const { theme, toggleTheme } = useTheme();
 
 	return (
@@ -28,11 +29,8 @@ export const Navbar = () => {
 				</button>
 				<div className='collapse navbar-collapse' id='navbarSupportedContent'>
 					<ul className='navbar-nav me-auto mb-2 mb-lg-0'>
-						<li className='nav-item' key='faq'>
-							<a className='nav-link active' aria-current='page' href='faq'>
-								FAQ
-							</a>
-						</li>
+						<NavbarItem href='faq'>FAQ</NavbarItem>
+						<NavbarItem href='player'>Player</NavbarItem>
 					</ul>
 
 					<a className='theme-mode dark-mode mx-3' onClick={toggleTheme}>
@@ -53,3 +51,5 @@ export const Navbar = () => {
 		</nav>
 	);
 };
+
+export default Navbar;

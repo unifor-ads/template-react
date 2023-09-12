@@ -1,7 +1,9 @@
 import { createContext, useState, useEffect, useRef, useContext } from 'react';
 import DisplayTrack from './DisplayTrack';
+import TrackList from './TrackList';
+
+import './AudioPlayer.css';
 import Controls from './Controls';
-import ProgressBar from './ProgressBar';
 
 export const AudioContext = createContext<any>(null);
 
@@ -27,6 +29,43 @@ export function AudioPlayer({ tracks }: audioProviderProps) {
 	const audioRef = useRef<HTMLAudioElement>(null);
 	const progressBarRef = useRef<HTMLInputElement>(null);
 
+	const skipForward = () => {
+		if (!audioRef.current) return;
+		audioRef.current.currentTime += 15;
+	};
+
+	const skipBackward = () => {
+		if (!audioRef.current) return;
+		audioRef.current.currentTime -= 15;
+	};
+
+	const handlePrevious = () => {
+		if (!audioRef.current) return;
+		//Retorna ao início da música caso esteja com mais de 3 segundos de progresso.
+		if (audioRef.current.currentTime > 3) {
+			audioRef.current.currentTime = 0;
+		} else {
+			if (trackIndex === 0) {
+				let lastTrackIndex = tracks.length - 1;
+				setTrackIndex(lastTrackIndex);
+				setCurrentTrack(tracks[lastTrackIndex]);
+			} else {
+				setTrackIndex((prev: number) => prev - 1);
+				setCurrentTrack(tracks[trackIndex - 1]);
+			}
+		}
+	};
+
+	const handleNext = () => {
+		if (trackIndex >= tracks.length - 1) {
+			setTrackIndex(0);
+			setCurrentTrack(tracks[0]);
+		} else {
+			setTrackIndex((prev: number) => prev + 1);
+			setCurrentTrack(tracks[trackIndex + 1]);
+		}
+	};
+
 	return (
 		<AudioContext.Provider
 			value={{
@@ -41,14 +80,16 @@ export function AudioPlayer({ tracks }: audioProviderProps) {
 				tracks,
 				audioRef,
 				progressBarRef,
+				skipForward,
+				skipBackward,
+				handlePrevious,
+				handleNext,
 			}}
 		>
 			<div className='audio-player'>
-				<div className='inner'>
-					<DisplayTrack />
-					<Controls />
-					<ProgressBar />
-				</div>
+				<DisplayTrack />
+				<Controls />
+				<TrackList />
 			</div>
 		</AudioContext.Provider>
 	);

@@ -3,7 +3,8 @@ import { useContext } from 'react';
 import { AudioContext } from '.';
 
 const DisplayTrack = () => {
-	const { currentTrack, audioRef, setDuration, progressBarRef } = useContext(AudioContext);
+	const { currentTrack, audioRef, setDuration, progressBarRef, handleNext } =
+		useContext(AudioContext);
 
 	const onLoadedMetadata = () => {
 		if (!audioRef || !audioRef.current) return;
@@ -19,10 +20,11 @@ const DisplayTrack = () => {
 				src={currentTrack.src}
 				ref={audioRef}
 				onLoadedMetadata={onLoadedMetadata}
-				controls
+				onEnded={handleNext}
+				// controls
 			/>
 			<div className='audio-info'>
-				<div className='audio-image'>
+				<div className='audio-avatar'>
 					{currentTrack.thumbnail ? (
 						<img src={currentTrack.thumbnail} alt='audio avatar' />
 					) : (
@@ -33,7 +35,7 @@ const DisplayTrack = () => {
 						</div>
 					)}
 				</div>
-				<div className='text'>
+				<div className='audio-text'>
 					<p className='title'>{currentTrack.title}</p>
 					<p>{currentTrack.artist}</p>
 				</div>

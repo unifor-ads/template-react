@@ -29,7 +29,7 @@ const ProgressBar = () => {
 	};
 
 	return (
-		<div className='timebar'>
+		<div className='audio-timebar'>
 			<span className='time current'>{formatTime(timeProgress)}</span>
 			<input
 				type='range'

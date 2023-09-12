@@ -14,3 +14,7 @@ body.light {
 .text-align-center {
 	text-align: center !important;
 }
+
+.text-align-start {
+	text-align: start !important;
+}

@@ -1,0 +1,19 @@
+.card.sign-in {
+	text-align: left;
+}
+
+.cardsign-in>.form {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+@media (min-width: 769px) {
+	.card.sign-in {
+		padding: 1rem;
+		aspect-ratio: 3 / 4;
+		max-width: fit-content;
+	}
+}
+
+@media (max-width: 768px) {}
